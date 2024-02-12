@@ -1,6 +1,7 @@
 import {
     Accordions,
-    Sort
+    Sort,
+    Form,
 } from "./Exports"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
             </h1>
             <Accordions />
             <Sort />
+            <Form/>
         </>
     )
 }
