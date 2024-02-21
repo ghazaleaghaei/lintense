@@ -11,25 +11,34 @@ function Api({ }) {
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState("")
     useEffect(() => {
+        const controller = new AbortController();
         async function fetchData() {
             try {
                 setIsLoading(true)
-                const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?name=${query}`)
+                const { data } = await axios.get(`https://rickandmortyapi.com/api/character/?name=${query}`, {  signal: controller.signal})
                 setCharacters(data.results.slice(0, 5))
             }
             catch (err) {
-                setCharacters([])
-                setError(err.response.data.error)
+                if (axios.isCancel) {
+                    console.log('Request canceled');
+                  } else  {
+                    setCharacters([])
+                    setError(err.response.data.error)
+                }
+
             }
             finally {
                 setIsLoading(false)
             }
         }
         fetchData()
+        return () => {
+            controller.abort()
+        }
     }, [query])
     return (
         <>
-             <Search
+            <Search
                 query={query}
                 onChange={(e) => { setQuery(e.target.value) }}
             />
@@ -41,7 +50,7 @@ function Api({ }) {
                         {item.name}
                     </li>)}
             </ul>
-           
+
         </>
     )
 }
