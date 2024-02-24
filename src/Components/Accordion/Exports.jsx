@@ -1,5 +1,5 @@
-import Accordion from './Accordion'
 import Accordions from './Accordions'
+import Accordion from './Accordion'
 
-export { Accordion }
 export { Accordions }
+export {Accordion}
