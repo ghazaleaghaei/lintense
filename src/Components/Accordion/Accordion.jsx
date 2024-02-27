@@ -4,7 +4,7 @@ function Accordion({ title, id, children, onOpenHandler, isOpen }) {
 
     return (
         <>
-            <div class={`mx-5 bg-gray-50 shadow-md p-2 my-5 rounded-lg duration-300 ${isOpen === id ? "max-h-100" : "max-h-10 overflow-hidden"}`}>
+            <div class={`mx-5 bg-gray-50 text-black shadow-md p-2 my-5 rounded-lg duration-300 ${isOpen === id ? "max-h-100" : "max-h-10 overflow-hidden"}`}>
                 <div
                     class="flex cursor-pointer"
                     onClick={() => { onOpenHandler(id) }}

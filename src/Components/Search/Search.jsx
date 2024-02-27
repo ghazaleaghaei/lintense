@@ -17,7 +17,7 @@ function Search() {
     return (
         <div class="flex flex-col justify-center">
             <input
-                class="bg-sky-50 border outline-none rounded-lg p-2 my-5"
+                class="bg-sky-50 border outline-none rounded-lg p-2 my-5 dark:text-black"
                 placeholder="Search..."
                 value={query}
                 onChange={(e) => {

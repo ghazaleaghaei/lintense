@@ -6,7 +6,7 @@ function Input({ title, onChange }) {
                 value={title}
                 type="text"
                 placeholder="title"
-                class="bg-sky-50 outline-none border rounded-lg p-2"
+                class="bg-sky-50 outline-none border rounded-lg p-2 dark:text-black"
                 onChange={onChange}
             />
         </>

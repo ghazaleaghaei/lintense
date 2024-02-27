@@ -15,7 +15,7 @@ function Select({ sortBy, onSelect }) {
                     </span>
                     <ArrowDown class="w-5 ms-auto" />
                 </button>
-                <div class={`absolute flex flex-col w-full mt-1 border border-black shadow-lg *:flex *:items-center *:h-8 *:px-3 *:text-sm hover:*:bg-sky-100 duration-300 *:cursor-pointer ${isOpen ? "translate-x-0" : "translate-y-full"}`}>
+                <div class={`absolute flex flex-col w-full mt-1 border border-black shadow-lg *:flex *:items-center *:h-8 *:px-3 *:text-sm hover:*:bg-sky-100 duration-300 *:cursor-pointer dark:hover:*:bg-slate-500 ${isOpen ? "translate-x-0" : "translate-y-full"}`}>
                     <option
                         value="Latest Posts"
                         onClick={(e) => { onSelect(e), setIsOpen(!isOpen) }}
