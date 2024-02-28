@@ -5,13 +5,13 @@ import {
     Search,
     Api,
     DarkMode,
-    ThemeProvider,
+    Providers,
 } from "./Exports"
 
 function App() {
 
     return (
-        <ThemeProvider>
+        <Providers>
             <DarkMode>
                 <div class="max-w-sm mx-auto dark:bg-slate-800">
                     <h1 className="text-3xl font-bold text-sky-300 text-center">
@@ -24,7 +24,7 @@ function App() {
                     <Api />
                 </div>
             </DarkMode>
-        </ThemeProvider>
+        </Providers>
     )
 }
 

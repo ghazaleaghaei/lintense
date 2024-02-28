@@ -6,8 +6,7 @@ import { Form } from './Components/Form/Exports'
 import { Search } from './Components/Search/Exports'
 import { Api } from './Components/Api/Exports'
 import { DarkMode } from './Components/DarkMode/Exports'
-import { ThemeProvider } from './Context/ThemeContext'
-import { useTheme } from './Context/ThemeContext'
+import { Providers } from './Components/Providers/Exports'
 
 export { Accordion }
 export { Accordions }
@@ -17,5 +16,4 @@ export { Form }
 export { Search }
 export { Api }
 export { DarkMode }
-export { ThemeProvider }
-export { useTheme }
+export { Providers }
