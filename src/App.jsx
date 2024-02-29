@@ -1,19 +1,15 @@
+import { Route, Routes } from "react-router-dom"
 import {
-    Accordions,
-    Sort,
-    Form,
-    Search,
-    Api,
-    DarkMode,
-    Providers,
+    Layout,
+    Home,
+    Blog,
 } from "./Exports"
 
 function App() {
 
     return (
-        <Providers>
-            <DarkMode>
-                <div class="max-w-sm mx-auto dark:bg-slate-800">
+        <>
+            {/* <div class="max-w-sm mx-auto dark:bg-slate-800">
                     <h1 className="text-3xl font-bold text-sky-300 text-center">
                         useful components and hooks
                     </h1>
@@ -22,9 +18,14 @@ function App() {
                     <Form />
                     <Search />
                     <Api />
-                </div>
-            </DarkMode>
-        </Providers>
+                </div> */}
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<Home />} />
+                    <Route path="blog" element={<Blog />} />
+                </Route>
+            </Routes>
+        </>
     )
 }
 

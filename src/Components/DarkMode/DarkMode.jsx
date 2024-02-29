@@ -1,4 +1,4 @@
-import { useTheme } from "../../Context/ThemeContext"
+import { useTheme } from "../Exports"
 
 function DarkMode({ children }) {
     const { isDark, onChange } = useTheme()

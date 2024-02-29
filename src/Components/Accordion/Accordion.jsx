@@ -1,4 +1,4 @@
-import { ArrowDown } from "../Svg/Exports"
+import { ArrowDown } from "../Exports"
 
 function Accordion({ title, id, children, onOpenHandler, isOpen }) {
 

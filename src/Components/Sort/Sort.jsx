@@ -1,6 +1,6 @@
 import {
     Select
-} from "./Exports"
+} from "../Exports"
 import { useState } from "react"
 
 function Sort() {

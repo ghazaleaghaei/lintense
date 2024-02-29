@@ -1,4 +1,4 @@
-import { Input } from './Exports'
+import { Input } from '../Exports'
 import { useState } from 'react'
 
 function Form() {

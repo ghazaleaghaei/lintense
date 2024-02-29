@@ -1,4 +1,4 @@
-import { Accordion } from './Exports'
+import { Accordion } from '../Exports'
 import { useState } from 'react'
 
 function Accordions() {

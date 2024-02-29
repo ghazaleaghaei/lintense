@@ -1,4 +1,4 @@
-import { ArrowDown } from "../Svg/Exports"
+import { ArrowDown } from "../Exports"
 import { useState } from "react"
 
 function Select({ sortBy, onSelect }) {

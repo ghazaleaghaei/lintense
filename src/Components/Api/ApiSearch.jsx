@@ -1,5 +1,5 @@
 
-function Search({query,onChange}) {
+function ApiSearch({query,onChange}) {
 
     return (
         <div class="flex flex-col max-w-sm mx-auto justify-center">
@@ -13,4 +13,4 @@ function Search({query,onChange}) {
     )
 }
 
-export default Search
+export default ApiSearch

@@ -2,7 +2,7 @@ import { useState } from "react"
 import {
     Loading,
     Search,
-} from './Exports'
+} from '../Exports'
 import { useFetchData, useLocalStorage } from "../../Hooks/Exports"
 
 function Api({ }) {
