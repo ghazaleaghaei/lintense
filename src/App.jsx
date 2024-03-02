@@ -3,6 +3,8 @@ import {
     Layout,
     Home,
     Blog,
+    Post,
+    Category,
 } from "./Exports"
 
 function App() {
@@ -22,7 +24,11 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
-                    <Route path="blog" element={<Blog />} />
+                    <Route path="blog" element={<Blog />} >
+                        <Route index element={<Post />} />
+                        <Route path="post" element={<Post />} />
+                        <Route path="category" element={<Category />} />
+                    </Route>
                 </Route>
             </Routes>
         </>

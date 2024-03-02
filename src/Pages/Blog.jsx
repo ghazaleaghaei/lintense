@@ -1,9 +1,20 @@
+import { NavLink, Outlet } from "react-router-dom"
 
-function Blog({  }) {
+function Blog({ }) {
 
     return (
         <>
-            <div> bog page </div>
+            <nav class="border-b ">
+                <ul class="inline-flex w-full justify-center gap-4 text-lg font-bold p-2">
+                    <li>
+                        <NavLink end to="category">category</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="post">post</NavLink>
+                    </li>
+                </ul>
+            </nav>
+            <Outlet />
         </>
     )
 }
