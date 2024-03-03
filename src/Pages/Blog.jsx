@@ -10,7 +10,7 @@ function Blog({ }) {
                         <NavLink end to="category">category</NavLink>
                     </li>
                     <li>
-                        <NavLink to="post">post</NavLink>
+                        <NavLink to="posts">posts</NavLink>
                     </li>
                 </ul>
             </nav>

@@ -1,10 +1,11 @@
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes,Navigate } from "react-router-dom"
 import {
     Layout,
     Home,
     Blog,
-    Post,
+    Posts,
     Category,
+    Post,
 } from "./Exports"
 
 function App() {
@@ -24,9 +25,10 @@ function App() {
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
+                    <Route path="blog/posts/:postId" element={<Post />} />
                     <Route path="blog" element={<Blog />} >
-                        <Route index element={<Post />} />
-                        <Route path="post" element={<Post />} />
+                        <Route index element={<Navigate to="posts" />} />
+                        <Route path="posts" element={<Posts />} />
                         <Route path="category" element={<Category />} />
                     </Route>
                 </Route>
