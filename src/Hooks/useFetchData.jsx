@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 
-function useFetchData(url,query) {
-    const [characters, setCharacters] = useState([])
+function useFetchData(url, query) {
+    const [data, setData] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState("")
     useEffect(() => {
@@ -10,14 +10,14 @@ function useFetchData(url,query) {
         async function fetchData() {
             try {
                 setIsLoading(true)
-                const { data } = await axios.get(`${url}=${query}`, {  signal: controller.signal})
-                setCharacters(data.results.slice(0, 5))
+                const { data } = await axios.get(`${url}=${query}`, { signal: controller.signal })
+                setData(data.results)
             }
             catch (err) {
                 if (axios.isCancel) {
                     console.log('Request canceled');
-                  } else  {
-                    setCharacters([])
+                } else {
+                    setData([])
                     setError(err.response.data.error)
                 }
 
@@ -30,9 +30,8 @@ function useFetchData(url,query) {
         return () => {
             controller.abort()
         }
-    }, [query])
-
-    return {isLoading,characters,error}
+    }, [query, url])
+    return { isLoading, data, error }
 }
 
 export default useFetchData

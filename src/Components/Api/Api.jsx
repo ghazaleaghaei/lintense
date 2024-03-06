@@ -7,7 +7,7 @@ import { useFetchData, useLocalStorage } from "../../Hooks/Exports"
 
 function Api({ }) {
     const [query, setQuery] = useState("")
-    const { isLoading, characters, error } = useFetchData("https://rickandmortyapi.com/api/character/?name", query)
+    const { isLoading, data, error } = useFetchData("https://rickandmortyapi.com/api/character/?name", query)
     const [value, setValue] = useLocalStorage("ITEMS", [])
     return (
         <>
@@ -18,7 +18,7 @@ function Api({ }) {
             {isLoading && <Loading />}
             {error.length > 0 && <span class="bg-red-300 text-white p-2 rounded-md">{error}</span>}
             <ul>
-                {characters.map(item =>
+                {data.map(item =>
                     <li key={item.id}>
                         {item.name}
                     </li>)}
